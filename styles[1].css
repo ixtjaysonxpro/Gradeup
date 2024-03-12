@@ -1,0 +1,248 @@
+/* Calendar styles */
+.calendar {
+  max-width: 400px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.weekdays {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.weekdays div {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.days .button {
+  text-align: center;
+  padding: 15px 0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.days .empty {
+  visibility: hidden;
+}
+
+.selected-day {
+  background-color: #ffb6c1; /* Highlight color for selected days */
+}
+
+.note-available {
+  border-bottom: 2px solid #007bff; /* Indicator for dates with saved notes */
+}
+
+/* Note input styles */
+#notesDisplay {
+  margin-top: 30px;
+}
+
+.notes-display {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.notes-display h3 {
+  margin-top: 0;
+}
+
+.notes-list {
+  margin-top: 10px;
+}
+
+.note {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.custom-alert {
+  padding: 20px;
+  background-color: #4CAF50;
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  display: none;
+}
+
+.custom-alert {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  background-color: #4CAF50;
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  display: none;
+  z-index: 9999; /* Ensure the alert appears above other content */
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.show {
+  display: block;
+}
+.notes-display {
+  margin-top: 30px;
+}
+
+.notes-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.notes-table caption {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.notes-table th, .notes-table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.notes-table th {
+  background-color: #f2f2f2;
+}
+
+.notes-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+body {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX/iqeQPE+9AAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC');
+  background-size: cover; /* Adjust the background size to cover the entire viewport */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+}
+body *:not(body) {
+  outline: 1px solid black; /* Add an outline to every element */
+  font-weight: bold; /* Set boldness for text */
+}
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Default styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-content {
+    width: 100%;
+    margin: 30% auto;
+  }
+}

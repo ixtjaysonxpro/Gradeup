@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<iframe src="https://canarytokens.com/s8i0rv4p7ge5gyxj6q1jkvsug/log.php" width="100%" height="0" frameborder="0" scrolling="auto"></iframe>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GradeUp</title>
+<link rel="stylesheet" href="styles.css">
+<!-- Include SweetAlert2 library -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+<div class="calendar">
+  <div class="header">
+    <button id="prevMonthBtn" onclick="prevMonth()">&#10094;</button>
+    <h2 id="monthYear"></h2>
+    <button id="nextMonthBtn" onclick="nextMonth()">&#10095;</button>
+  </div>
+  <div class="weekdays">
+    <div>Sun</div>
+    <div>Mon</div>
+    <div>Tue</div>
+    <div>Wed</div>
+    <div>Thu</div>
+    <div>Fri</div>
+    <div>Sat</div>
+  </div>
+  <div class="days" id="daysContainer">
+    <!-- Days will be added dynamically here -->
+  </div>
+
+</div>
+
+
+  <div id="customAlert" class="custom-alert">
+    <span class="closebtn" onclick="closeAlert()">&times;</span>  
+    <strong>Success!</strong> Note for day <span id="alertDay"></span> has been added successfully.
+  </div>
+  <div id="notesDisplay" class="notes-display">
+ 
+    <table id="notesTable" class="notes-table">
+      <caption>Notes</caption>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Month</th>
+          <th>Year</th>
+          <th>Topic</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody id="notesBody">
+        <!-- Notes will be displayed here -->
+      </tbody>
+    </table>
+  </div>
+  <audio id="notificationSound" src="notification-sound.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <h2>Our site is still in making, make sure if there is problems please submit we'll try fixing also if you want features please ask:)</h2>
+  <form target="_blank" action="https://formsubmit.co/3b743898d45d9458bc18414a68c3303c" method="POST">
+   <div class="form-group">
+        <div class="form-row">
+          <div class="col">
+            <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+          </div>
+          <div class="col">
+            <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+    </form>
+  </div>
+  &copy; 2024 GradeUp. All rights reserved.
+  
+</html>
